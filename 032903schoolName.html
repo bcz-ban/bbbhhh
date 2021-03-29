@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h3>*判断大学*</h3>
+			<input type="text" v-model="schoolName">
+			<li v-if="schoolName=='北京大学'">985、211大学</li>
+			<li v-if="schoolName=='清华大学'">985、211大学</li>
+			<li v-if="schoolName=='复旦大学'">985、211大学</li>
+			<li v-if="schoolName=='上海交通大学'">985、211大学</li>
+			<li v-if="schoolName=='中国科学技术大学'">985、211大学</li>
+			<li v-if="schoolName=='南京大学'">985、211大学</li>
+			<li v-if="schoolName=='中国人民大学'">985、211大学</li>
+			<li v-if="schoolName=='同济大学'">985、211大学</li>
+			<li v-if="schoolName=='北京航天航空大学'">985、211大学</li>
+			<li v-if="schoolName=='华中科技大学'">985、211大学</li>
+			<li v-if="schoolName=='北京师范大学'">985、211大学</li>
+			<li v-if="schoolName=='贵州大学'">211大学</li>
+			<li v-if="schoolName=='广西大学'">211大学</li>
+			<li v-if="schoolName=='上海财经大学'">211大学</li>
+			<li v-if="schoolName=='中国矿业大学'">211大学</li>
+			<li v-if="schoolName=='西南大学'">211大学</li>
+			<li v-if="schoolName=='海南大学'">211大学</li>
+			<li v-if="schoolName=='东北林业大学'">211大学</li>
+			<li v-if="schoolName=='中南财经政法大学'">211大学</li>
+			<li v-if="schoolName=='内蒙古大学'">211大学</li>
+			<li v-if="schoolName=='东北农业大学'">211大学</li>
+			<li v-if="schoolName=='延边大学'">211大学</li>
+			<li v-if="schoolName=='青海大学'">211大学</li>
+			<li v-if="schoolName=='宁夏大学'">211大学</li>
+			
+			</div>
+			<script type="text/javascript">
+				let v=new Vue({
+					el:'#app',
+					data:{
+						schoolName:''
+					}
+				})
+			</script>
+		
+	</body>
+</html>
