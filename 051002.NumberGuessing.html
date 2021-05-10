@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h2>猜数字游戏</h2>
+			<input type="text" v-model="rdmNumber"  @keyup.enter="show()">
+			<br />
+			正确数字：{{tureNumber}}
+			
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:"#app",
+				data:{
+					rdmNumber:'',
+					tureNumber:Math.ceil(Math.random()*10)
+					
+				},
+				methods:{
+					show(){
+						if(v.rdmNumber==v.tureNumber){
+							alert("你答对了"+v.rdmNumber);
+						}
+						
+						if(v.rdmNumber>v.tureNumber){
+							alert("猜大了");
+						}
+						if(v.rdmNumber<v.tureNumber){
+							alert("猜小了");
+						}
+						
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
